@@ -6,6 +6,8 @@ rating: 5
 ---
 Hello world, hello netlify and netlify cms, hello vue, vuex, and nuxt.
 
-
-
 egads
+
+
+
+aaa
