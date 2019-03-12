@@ -39,7 +39,9 @@ module.exports = {
     '@nuxtjs/axios',
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@dinamomx/nuxtent',
+    'nuxt-netlify-cms'
   ],
   /*
   ** Axios module configuration
@@ -65,6 +67,21 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+    }
+  },
+
+  /*
+  ** Nuxtent config
+  */
+  nuxtent: {
+    content: {
+      page: '/_post',
+      permalink: ':year/:slug',
+      generate: [
+        // assets to generate static build
+        'get',
+        'getAll'
+      ]
     }
   }
 }
