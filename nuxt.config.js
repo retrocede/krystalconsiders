@@ -40,8 +40,7 @@ module.exports = {
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
     '@nuxtjs/pwa',
-    'nuxtent',
-    'nuxt-netlify-cms'
+    'nuxtent'
   ],
   /*
   ** Axios module configuration

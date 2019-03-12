@@ -5,7 +5,7 @@ backend:
   #repo: retrocede/krystalconsiders
 publish_mode: editorial_workflow # enables editorial workflow (draft/approval/publish)
 media_folder: "static/uploads" #  media uploads stored in repo under assets/uploads
-public_folder: "/images/uploads" # where the images are in the url
+
 collections:
   - name: "posts" # used in routes
     label: "Post" # used in UI
