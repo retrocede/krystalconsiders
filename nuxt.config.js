@@ -40,7 +40,7 @@ module.exports = {
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
     '@nuxtjs/pwa',
-    '@dinamomx/nuxtent',
+    'nuxtent',
     'nuxt-netlify-cms'
   ],
   /*
