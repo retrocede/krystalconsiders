@@ -3,7 +3,7 @@ backend:
   branch: master # branch to update (optional, defaults to master)
   #name: github
   #repo: retrocede/krystalconsiders
-publish_mode: editorial_workflow # enables editorial workflow (draft/approval/publish)
+#publish_mode: editorial_workflow # enables editorial workflow (draft/approval/publish)
 
 media_folder: "static/images/uploads" #  media uploads stored in repo under assets/uploads
 public_folder: "/images/uploads"
@@ -19,5 +19,4 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image", required: false }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
       - { label: "Body", name: "body", widget: "markdown" }
