@@ -13,7 +13,7 @@ collections:
     label: "Post" # used in UI
     folder: "content/posts" # The path to the folder where the documents are stored.
     create: true # should users be allowed to create new items in this collection?
-    slug: "{{ year }}-{{ slug }}" # Filename template, eg YYYY-title.md
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # the fields for each document
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
