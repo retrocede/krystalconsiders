@@ -3,7 +3,7 @@ const glob = require('glob')
 const path = require('path')
 
 const dynamicRoutes = getDynamicPaths({
-  '/posts': 'content/posts/*.md'
+  '/posts': 'posts/*.md'
 })
 
 module.exports = {
@@ -94,7 +94,7 @@ module.exports = {
 function getDynamicPaths(urlFilepathTable) {
   return [].concat(
     ...Object.keys(urlFilepathTable).map(url => {
-      var filepathGlob = urlFilepathTable[url]
+      const filepathGlob = urlFilepathTable[url]
       return glob
         .sync(filepathGlob, { cwd: 'content' })
         .map(filepath => `${url}/${path.basename(filepath, '.json')}`)
