@@ -12,6 +12,7 @@ collections:
   - name: "posts" # used in routes
     label: "Post" # used in UI
     folder: "content/posts" # The path to the folder where the documents are stored.
+    format: "json"
     create: true # should users be allowed to create new items in this collection?
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # the fields for each document
