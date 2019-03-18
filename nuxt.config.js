@@ -3,7 +3,7 @@ const glob = require('glob')
 const path = require('path')
 
 const dynamicRoutes = getDynamicPaths({
-  '/posts': 'posts/*.md'
+  '/posts': 'posts/*.json'
 })
 
 module.exports = {
