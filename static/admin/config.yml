@@ -1,8 +1,6 @@
 backend:
-  #name: git-gateway
-  #branch: master # branch to update (optional, defaults to master)
-  name: github
-  repo: retrocede/krystalconsiders
+  name: git-gateway
+  branch: master # branch to update (optional, defaults to master)
 
 publish_mode: editorial_workflow # enables editorial workflow (draft/approval/publish)
 
