@@ -10,11 +10,7 @@
           class="navbar-item"
           href="/"
         >
-          <img
-            src="~assets/buefy.png"
-            alt="Buefy"
-            height="28"
-          >
+          Krystal Considers
         </a>
 
         <div class="navbar-burger">
@@ -66,6 +62,11 @@ export default {
           title: 'Inspire',
           icon: 'lightbulb',
           to: { name: 'inspire' }
+        },
+        {
+          title: 'Posts',
+          icon: 'book-open',
+          to: { name: 'postlist' }
         }
       ]
     }

@@ -2,10 +2,6 @@ const pkg = require('./package')
 const glob = require('glob')
 const path = require('path')
 
-const dynamicRoutes = getDynamicPaths({
-  '/posts': 'posts/*.json'
-})
-
 module.exports = {
   mode: 'universal',
 
@@ -62,10 +58,6 @@ module.exports = {
     html: true
   },
 
-  generate: {
-    routes: dynamicRoutes
-  },
-
   /*
   ** Build configuration
   */
@@ -85,19 +77,4 @@ module.exports = {
       }
     }
   }
-}
-
-/**
- * Create an array of URLs from a list of files
- * @param {*} urlFilepathTable
- */
-function getDynamicPaths(urlFilepathTable) {
-  return [].concat(
-    ...Object.keys(urlFilepathTable).map(url => {
-      const filepathGlob = urlFilepathTable[url]
-      return glob
-        .sync(filepathGlob, { cwd: 'content' })
-        .map(filepath => `${url}/${path.basename(filepath, '.json')}`)
-    })
-  )
 }
