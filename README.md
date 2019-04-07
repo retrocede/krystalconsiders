@@ -1,24 +1,22 @@
 # krystalconsiders
 
-> Krystal&#39;s blog
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6ef53512-33aa-4430-aeb8-88e2ef725e31/deploy-status)](https://app.netlify.com/sites/modest-lalande-f74bfa/deploys)
+> Krystal's Blog Frontend
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ yarn install
+$ npm install # Or yarn install
 
 # serve with hot reload at localhost:3000
-$ yarn run dev
+$ npm run dev
 
 # build for production and launch server
-$ yarn run build
-$ yarn start
+$ npm run build
+$ npm start
 
 # generate static project
-$ yarn run generate
+$ npm run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
