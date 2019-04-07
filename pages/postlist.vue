@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
     <ul>
-      <li v-for='post in posts'>
+      <li v-for="post in posts">
         {{ post.title }}
       </li>
     </ul>
