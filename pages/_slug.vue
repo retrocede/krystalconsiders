@@ -11,7 +11,7 @@ export default {
       post: {}
     }
   },
-  asyncData ({ app, params, error, payload }) {
+  asyncData ({ app, params, error, payload, env }) {
     if (payload) {
       return { post: payload }
     }

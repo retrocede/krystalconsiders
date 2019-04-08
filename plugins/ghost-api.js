@@ -3,7 +3,7 @@ import Vue from 'vue'
 
 const api = new GhostContentAPI({
   url: 'https://ghost.krystalconsiders.com',
-  key: process.env.KRYSTAL_GHOST_API_KEY,
+  key: process.env.ghostApiKey,
   version: 'v2'
 })
 

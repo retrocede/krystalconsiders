@@ -28,7 +28,7 @@ export default {
       posts: []
     }
   },
-  asyncData ({ app, error }) {
+  asyncData ({ app, error, env }) {
     return app.ghost.posts
       .browse({ include: 'tags,authors' })
       .then(posts => {

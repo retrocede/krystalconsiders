@@ -3,7 +3,7 @@ const nodeExternals = require('webpack-node-externals')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 const api = new GhostContentAPI({
   url: 'https://ghost.krystalconsiders.com',
-  key: '76a2b608a386617f265fec1a3b',
+  key: process.env.KRYSTAL_GHOST_API_KEY,
   version: 'v2'
 })
 
@@ -25,7 +25,7 @@ module.exports = {
   ** env vars
   */
   env: {
-    ghostApiKey: process.env.KRYSTAL_GHOST_API_KEY
+    ghostApiKey: process.env.KRYSTAL_GHOST_API_KEY || ''
   },
   /*
   ** Headers of the page
