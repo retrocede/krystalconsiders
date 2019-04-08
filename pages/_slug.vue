@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="content" v-html="html"></div>
+        <div class="content" v-html="post.html"></div>
     </section>
 </template>
 
@@ -13,24 +13,24 @@ export default {
       post: {}
     }
   },
-  asyncData (context) {
+  asyncData ({ params, error, payload }) {
+    if (payload) return { post: payload }
+
     const api = new GhostContentAPI({
       url: 'https://ghost.krystalconsiders.com',
       key: '76a2b608a386617f265fec1a3b',
       version: 'v2'
     })
 
-    console.log('fetching posts')
-
     return api.posts
-      .read({ slug: context.params.slug }, { include: 'tags,authors' })
+      .read({ slug: params.slug }, { include: 'tags,authors' })
       .then(post => {
         console.log('Youve got posts! ', post)
-        return post
+        return { post }
       })
       .catch(err => {
         console.log('error: ', err)
-        context.error({ message: err })
+        error({ message: err })
       })
   }
 }

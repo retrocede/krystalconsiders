@@ -12,7 +12,10 @@ function generateRoutes () {
     .browse()
     .then(posts => {
       return posts.map(post => {
-        return `/${post.slug}`;
+        return {
+          route: `/${post.slug}`,
+          payload: post
+        }
       })
     })
 }
