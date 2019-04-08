@@ -14,7 +14,12 @@ export default {
     }
   },
   asyncData ({ params, error, payload }) {
-    if (payload) return { post: payload }
+    if (payload) {
+      console.log('payload present: ', payload)
+      return { post: payload }
+    }
+
+    console.log('payload not found')
 
     const api = new GhostContentAPI({
       url: 'https://ghost.krystalconsiders.com',
