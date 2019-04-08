@@ -22,31 +22,20 @@
 </template>
 
 <script>
-import GhostContentAPI from '@tryghost/content-api'
-
 export default {
   data () {
     return {
       posts: []
     }
   },
-  created () {
-    const api = new GhostContentAPI({
-      url: 'https://ghost.krystalconsiders.com',
-      key: '76a2b608a386617f265fec1a3b',
-      version: 'v2'
-    })
-
-    api.posts
+  asyncData ({ app, error }) {
+    return app.ghost.posts
       .browse({ include: 'tags,authors' })
       .then(posts => {
-        this.posts = posts
-        posts.forEach(post => {
-          console.log(post.title)
-        })
+        return { posts }
       })
       .catch(err => {
-        console.log('error: ', err)
+        error({ message: err })
       })
   }
 }

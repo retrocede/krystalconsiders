@@ -5,29 +5,18 @@
 </template>
 
 <script>
-import GhostContentAPI from '@tryghost/content-api'
-
 export default {
   data () {
     return {
       post: {}
     }
   },
-  asyncData ({ params, error, payload }) {
+  asyncData ({ app, params, error, payload }) {
     if (payload) {
-      console.log('payload present: ', payload)
       return { post: payload }
     }
 
-    console.log('payload not found')
-
-    const api = new GhostContentAPI({
-      url: 'https://ghost.krystalconsiders.com',
-      key: '76a2b608a386617f265fec1a3b',
-      version: 'v2'
-    })
-
-    return api.posts
+    return app.ghost.posts
       .read({ slug: params.slug }, { include: 'tags,authors' })
       .then(post => {
         console.log('Youve got posts! ', post)

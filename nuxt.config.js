@@ -22,6 +22,12 @@ function generateRoutes () {
 
 module.exports = {
   /*
+  ** env vars
+  */
+  env: {
+    ghostApiKey: process.env.KRYSTAL_GHOST_API_KEY
+  },
+  /*
   ** Headers of the page
   */
   head: {
@@ -36,7 +42,10 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' }
     ]
   },
-  plugins: ['~/plugins/vuetify.js'],
+  plugins: [
+    '~/plugins/vuetify.js',
+    '~/plugins/ghost-api.js'
+  ],
   css: ['~/assets/style/app.styl'],
   /*
   ** Customize the progress bar color
