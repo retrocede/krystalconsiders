@@ -13,7 +13,7 @@
       <div class="posts">
         <ul>
           <li v-for="post in posts" :key="post.id">
-            <router-link :to="`/${post.slug}`">{{ post.title }}</router-link>
+            <n-link :to="`/${post.slug}`">{{ post.title }}</n-link>
           </li>
         </ul>
       </div>
